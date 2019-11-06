@@ -1,8 +1,18 @@
 @import "bootstrap";
 
+
 nav {
     background-color: #33354A;
     color: white;
+    margin-bottom: 1%;
+}
+
+body {
+    background-color: #F5F5F0;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 #logo {
@@ -28,6 +38,62 @@ nav {
     color: #CA696A;
 }
 
-body {
-    background-color: #F5F5F0;
+
+.main_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #C8BEC2;
+    background-color: #634B53;
+    padding: 3em;
+    width: 30%;
+    margin: 10em auto;
+    border-radius: 2em;
+}
+
+.main_title:hover {
+    color: #e8d6dd;
+}
+
+.article-listings {
+    background-color: #624B53;
+    color: #F5F5F0;
+    padding: 3em;
+
+    th {
+        padding-right: 5em;
+    }
+}
+
+.create-article {
+    display: flex;
+    flex-direction: row-reverse;
+    color: #7479ab;
+    font-weight: bold;
+}
+
+.create-article:hover {
+    color: rgb(72, 74, 106)
+}
+
+.action-button {
+    border: 1px solid;
+    border-radius: 2em;
+    color: #634B53;
+}
+
+.action-button:hover {
+    background-color: #634B53;
+    color: #F5F5F0
+}
+
+@media only screen and (max-width: 600px) {
+
+    nav {
+        margin-bottom: 10%;
+    }
+
+    .main_title {
+        font-size: 1em;
+    }
+
 }

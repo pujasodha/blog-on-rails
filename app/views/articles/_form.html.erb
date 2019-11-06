@@ -1,4 +1,3 @@
-<%= render 'shared/errors', obj: @article %>
 <div class="row">
   <div class="col-md-12">
     <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
@@ -41,8 +40,8 @@
       
       <div class="form-group">
         <div class="col-md-offset-1 col-md-11">
-          <%= f.submit class: 'btn btn-primary btn-lg pull-right' %>
-          <%= link_to "Cancel and Go Back", articles_path, class: 'btn btn-primary btn-lg pull-left' %>
+          <%= f.submit class: 'btn action-button' %>
+          <%= link_to "Cancel and Go Back", articles_path, class: 'btn action-button ' %>
         </div>
         </div>
 
