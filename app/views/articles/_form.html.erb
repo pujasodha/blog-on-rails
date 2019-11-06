@@ -1,40 +1,57 @@
-
-    <% if @article.errors.any? %>
-        <ul>
-            <% @article.errors.full_messages.each do |msg| %>
-            <l1><%= msg %></l1>
-        </ul>
-<% end %>
-<% end %>
-
-<div class = "row">
-<div class = "col-md-12">
-    <%=form_for @article do |f| %>
-
-    <div class = "form-group">
-        <div class = "control-label col-sm-8">
-            <%= f.label :title%> <br>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <% if @article.errors.any? %>
+        <div class="panel panel-danger col-md-offset-1">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+              <%= pluralize(@article.errors.count, "error") %>
+              prohibited this article from being saved:
+            </h2>
+            
+            <div class="panel-body">
+              <ul>
+                <% @article.errors.full_messages.each do |msg| %>
+                <li>
+                  <%= msg %>
+                </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class = "col-sm-4">
-            <%= f.text_field :title, class: "form-control", placeholder: "Title of Article", autofocus: true%>
+      <% end %>
+      <div class="form-group">
+        <div class="control-label col-md-1">
+          <%= f.label :title %>
         </div>
-    </div>
-
-    <div class = "form-group">
-        <div class = "control-label col-sm-4">
-        <%= f.label :description%> <br>
+        <div class="col-md-11">
+          <%= f.text_field :title, class: 'form-control', placeholder: "Title of article", autofocus: true %>
         </div>
-        <div class = "col-sm-8">
-        <%= f.text_area :description, class: "form-control", placeholder: "What's on your mind?"%>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-md-1">
+          <%= f.label :body %>
         </div>
-    </div>
+        <div class="col-md-11">
+          <%= f.text_area :description, rows: 10, class: 'form-control', placeholder: 'Body of article' %>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-md-offset-1 col-md-11">
+          <%= f.submit class: 'btn btn-primary btn-lg pull-right' %>
+          <%= link_to "Cancel and Go Back", articles_path, class: 'btn btn-primary btn-lg pull-left' %>
+        </div>
+        </div>
 
-    <div class = "form-group">
-    <ddiv class = "col-sm-offset-2 col-sm-10">
-        <%= f.submit class: "btn btn-primary btn-lg" %>
-    </ddiv>
+      <div class="form-group">
+        <div class="col-md-12">
+        </div>
+      </div>
 
 
-<% end %>
-    </div>
+      
+    <% end %>
+  </div>
 </div>
