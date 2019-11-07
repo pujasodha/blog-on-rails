@@ -1,8 +1,10 @@
 <h1 align = "center"> Article: <%= @article.title %></h1>
 
-<p class = "example"> Title: <%= @article.title %></p>
-<p> Description: <%= @article.description %></p>
+<div class = "article-post">
+    <p class = "article-title"> <%= @article.title %></p>
+    <p class = "article-description"> <%= @article.description %></p>
+</div>
 
 
-<%= link_to "Edit this article", edit_article_path(@article)%> 
+<%= link_to "Edit this article", edit_article_path(@article), class: "action-button"%> 
 
