@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
 
 
 nav {
@@ -8,6 +9,7 @@ nav {
 }
 
 body {
+    font-family: 'Didact Gothic', sans-serif;
     background-color: #F5F5F0;
 }
 
