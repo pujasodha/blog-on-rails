@@ -3,7 +3,9 @@
 <div class = "article-post">
     <p class = "article-title"> <%= @article.title %></p>
     <p class = "article-description"> <%= @article.description %></p>
+    <p class = "article-date"> <%= @article.updated_at %></p>
 </div>
+
 
 
 <%= link_to "Edit this article", edit_article_path(@article), class: "action-button"%> 
