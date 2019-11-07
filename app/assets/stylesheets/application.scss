@@ -42,13 +42,15 @@ a:hover {
 
 
 .main_title {
+    display: flex;
+    justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
     color: #C8BEC2;
     background-color: #634B53;
     padding: 3em;
     width: 30%;
-    margin: 10em auto;
+    margin: auto;
     border-radius: 2em;
 }
 
