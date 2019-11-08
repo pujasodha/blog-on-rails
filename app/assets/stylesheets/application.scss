@@ -11,7 +11,12 @@ nav {
 body {
     font-family: 'Didact Gothic', sans-serif;
     background-color: #F5F5F0;
+    background-image: url(/assets/background.jpg); 
+
+    background-size: cover;
 }
+
+
 
 a:hover {
     text-decoration: none;
@@ -36,8 +41,9 @@ a:hover {
 }
 
 #jumbo {
-    background-color: #F5F5F0;
+    background-color: transparent;
     color: #CA696A;
+   
 }
 
 
