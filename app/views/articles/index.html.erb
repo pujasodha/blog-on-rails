@@ -1,15 +1,15 @@
-<h1 class = "center">Listing All Articles </h1>
+<h1 class = "center"> Workout Log </h1>
 
 
-<%= link_to 'Create New Article', new_article_path, class: "create-article" %>
+<%= link_to 'Create New Workout', new_article_path, class: "create-article" %>
 
 
 <div class = "article-listings">
 <table>
 
 <tr>
-    <th>Title</th>
-    <th>Description</th>
+    <th>Workout</th>
+    <th>Routine</th>
 </tr>
 
 <% @article.each do |article| %>
@@ -17,9 +17,8 @@
 <tr>
     <td><%= article.title %> </td>
     <td><%= article.description %> </td>
-    <td><%= link_to 'Edit ', edit_article_path(article), class: "action-items" %></td> 
     <td><%= link_to 'Show ', article_path(article), class: "action-items" %></td> 
-    <td><%= link_to 'Delete', article_path(article), class: "action-items", method: :delete, data: {confirm: "Are you sure you want to delete the article? "} %></td>
+    
 </tr>
 
 

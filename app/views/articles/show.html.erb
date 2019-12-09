@@ -8,5 +8,5 @@
 
 
 
-<%= link_to "Edit this article", edit_article_path(@article), class: "action-button"%> 
-
+<%= link_to "Edit this Workout", edit_article_path(@article), class: "action-button"%> 
+<%= link_to 'Delete', article_path(@article), class: "action-button", method: :delete, data: {confirm: "Are you sure you want to delete the article? "} %>
